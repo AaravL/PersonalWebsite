@@ -1,3 +1,5 @@
+import CardDeck from '../components/CardDeck'
+
 export default function Portfolio() {
   const projects = [
     {
@@ -62,24 +64,7 @@ export default function Portfolio() {
           Featured Projects
         </h2>
         
-        <div className="portfolio-grid">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
-              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>
-                {project.suit}
-              </div>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="tags">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="tag">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <CardDeck cards={projects} />
       </div>
     </div>
   )

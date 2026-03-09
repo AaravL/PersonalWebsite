@@ -1,22 +1,24 @@
+import CardDeck from '../components/CardDeck'
+
 export default function Skills() {
   const skillCategories = [
     {
-      category: "Programming Languages",
+      title: "Programming Languages",
       suit: "♦",
       skills: ["Java", "Python", "JavaScript", "SQL", "C++", "C", "Scheme", "HTML/CSS"]
     },
     {
-      category: "ML & Data Science",
+      title: "ML & Data Science",
       suit: "♠",
       skills: ["PyTorch", "scikit-learn", "TensorFlow", "Pandas", "NumPy", "LightGBM", "CatBoost"]
     },
     {
-      category: "Frameworks & Libraries",
+      title: "Frameworks & Libraries",
       suit: "♣",
       skills: ["React", "FastAPI", "Spring Boot", "Flask", "WebSocket", "ONNX", "EfficientNet"]
     },
     {
-      category: "Tools & Platforms",
+      title: "Tools & Platforms",
       suit: "♥",
       skills: ["Git", "Supabase", "PostgreSQL", "Alpaca API", "Confluence", "REST APIs"]
     }
@@ -30,23 +32,11 @@ export default function Skills() {
       </div>
       
       <div className="container">
-        <div className="skills-container">
-          {skillCategories.map((item, index) => (
-            <div key={index} className="skill-card">
-              <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>
-                {item.suit}
-              </div>
-              <h3>{item.category}</h3>
-              <div className="skill-list">
-                {item.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    {skill}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <h2 style={{ color: '#d4af37', textAlign: 'center', marginBottom: '2rem', fontSize: '2rem' }}>
+          Skill Categories
+        </h2>
+        
+        <CardDeck cards={skillCategories} />
 
         <div style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(0, 0, 0, 0.3)', borderRadius: '10px', textAlign: 'center', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
           <h2 style={{ color: '#d4af37', marginBottom: '1rem', fontSize: '1.5rem' }}>

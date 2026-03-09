@@ -93,14 +93,13 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
       <div style={{ display: 'flex', gap: '5rem', alignItems: 'flex-start', justifyContent: 'center', flexDirection: 'row-reverse', width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
         
         {/* Deck Visualization - Right Side */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', minWidth: '200px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', minWidth: '200px', maxWidth: '284px' }}>
           <div
             className={dealingAnimation ? 'deck-animation' : ''}
             style={{
               position: 'relative',
-              width: '100%',
-              maxWidth: '350px',
-              height: '400px',
+              width: '284px',
+              height: '380px',
               perspective: '1000px',
               cursor: hasMore ? 'pointer' : 'not-allowed',
             }}
@@ -117,8 +116,8 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                     background: 'linear-gradient(135deg, #2d1f0f 0%, #4a3420 50%, #2d1f0f 100%)',
                     border: '2px solid #8b7355',
                     borderRadius: '12px',
-                    top: '8px',
-                    left: '8px',
+                    top: '6px',
+                    left: '6px',
                     opacity: 0.3,
                     boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
                   }}
@@ -131,8 +130,8 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                     background: 'linear-gradient(135deg, #2d1f0f 0%, #4a3420 50%, #2d1f0f 100%)',
                     border: '2px solid #8b7355',
                     borderRadius: '12px',
-                    top: '4px',
-                    left: '4px',
+                    top: '3px',
+                    left: '3px',
                     opacity: 0.6,
                     boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
                   }}
@@ -176,7 +175,7 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
         </div>
 
         {/* Card Display Area - Left Side */}
-        <div style={{ position: 'relative', height: '450px', width: '100%', maxWidth: '380px', perspective: '1000px' }}>
+        <div style={{ position: 'relative', height: '430px', width: '100%', maxWidth: '284px', perspective: '1000px' }}>
           {/* Stacked cards in background (visual effect) */}
           <>
             <div
@@ -185,7 +184,7 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                 top: '8px',
                 left: '8px',
                 width: '100%',
-                height: '400px',
+                height: '380px',
                 background: 'linear-gradient(135deg, #c4b5a0 0%, #9a8878 50%, #c4b5a0 100%)',
                 border: '3px solid #8b7355',
                 borderRadius: '12px',
@@ -200,7 +199,7 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                 top: '4px',
                 left: '4px',
                 width: '100%',
-                height: '400px',
+                height: '380px',
                 background: 'linear-gradient(135deg, #c4b5a0 0%, #9a8878 50%, #c4b5a0 100%)',
                 border: '3px solid #8b7355',
                 borderRadius: '12px',
@@ -222,7 +221,7 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                 top: 0,
                 left: 0,
                 width: '100%',
-                height: '400px',
+                height: '380px',
                 background: 'linear-gradient(135deg, #e8dcc8 0%, #d9cdb5 50%, #cbbf9f 100%)',
                 border: '3px solid #8b7355',
                 borderRadius: '12px',
@@ -316,7 +315,7 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                 top: 0,
                 left: 0,
                 width: '100%',
-                height: '400px',
+                height: '380px',
                 background: 'linear-gradient(135deg, #e8dcc8 0%, #d9cdb5 50%, #cbbf9f 100%)',
                 border: '3px solid #8b7355',
                 borderRadius: '12px',

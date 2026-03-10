@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import blankCardImage from './blank-playing-card-balatr-1753661972.png'
+import cardBackImage from './balatro-red-deck.png'
 
 export default function CardDeck({ cards, onCardClick, emptyMessage = "No more cards!" }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -113,13 +115,15 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
-                    background: 'linear-gradient(135deg, #2d1f0f 0%, #4a3420 50%, #2d1f0f 100%)',
+                    backgroundImage: `url('${cardBackImage}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
                     border: '2px solid #8b7355',
                     borderRadius: '12px',
                     top: '6px',
                     left: '6px',
                     opacity: 0.3,
-                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5)',
                   }}
                 />
                 <div
@@ -127,13 +131,15 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
-                    background: 'linear-gradient(135deg, #2d1f0f 0%, #4a3420 50%, #2d1f0f 100%)',
+                    backgroundImage: `url('${cardBackImage}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
                     border: '2px solid #8b7355',
                     borderRadius: '12px',
                     top: '3px',
                     left: '3px',
                     opacity: 0.6,
-                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5)',
                   }}
                 />
                 <div
@@ -141,25 +147,13 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
-                    background: 'linear-gradient(180deg, #3d2817 0%, #2d1f0f 50%, #1f1510 100%)',
-                    border: '3px solid #8b7355',
+                    backgroundImage: `url('${cardBackImage}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
                     borderRadius: '12px',
-                    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.7), inset 0 2px 4px rgba(0, 0, 0, 0.5)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontWeight: 'bold',
-                    color: '#8b7355',
-                    transition: 'all 0.3s ease',
-                    padding: '1rem',
-                    textAlign: 'center',
-                    gap: '0.5rem',
+                    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.7)',
                   }}
-                >
-                  <div style={{ fontSize: '3.5rem', lineHeight: '1' }}>🂠</div>
-                  <div style={{ fontSize: '1.1rem', fontFamily: 'Georgia, serif', textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>Deck</div>
-                </div>
+                />
               </>
             )}
           </div>
@@ -175,7 +169,7 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
         </div>
 
         {/* Card Display Area - Left Side */}
-        <div style={{ position: 'relative', height: '430px', width: '100%', maxWidth: '284px', perspective: '1000px' }}>
+        <div style={{ position: 'relative', height: '430px', width: '100%', maxWidth: '286px', perspective: '1000px' }}>
           {/* Stacked cards in background (visual effect) */}
           <>
             <div
@@ -184,9 +178,10 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                 top: '8px',
                 left: '8px',
                 width: '100%',
-                height: '380px',
-                background: 'linear-gradient(135deg, #c4b5a0 0%, #9a8878 50%, #c4b5a0 100%)',
-                border: '3px solid #8b7355',
+                height: '360px',
+                backgroundImage: `url('${blankCardImage}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 borderRadius: '12px',
                 opacity: 0.3,
                 zIndex: 0,
@@ -199,9 +194,10 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                 top: '4px',
                 left: '4px',
                 width: '100%',
-                height: '380px',
-                background: 'linear-gradient(135deg, #c4b5a0 0%, #9a8878 50%, #c4b5a0 100%)',
-                border: '3px solid #8b7355',
+                height: '360px',
+                backgroundImage: `url('${blankCardImage}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 borderRadius: '12px',
                 opacity: 0.5,
                 zIndex: 1,
@@ -221,9 +217,10 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                 top: 0,
                 left: 0,
                 width: '100%',
-                height: '380px',
-                background: 'linear-gradient(135deg, #e8dcc8 0%, #d9cdb5 50%, #cbbf9f 100%)',
-                border: '3px solid #8b7355',
+                height: '360px',
+                backgroundImage: `url('${blankCardImage}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 borderRadius: '12px',
                 padding: '2rem 1.5rem',
                 zIndex: 10,
@@ -316,8 +313,9 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                 left: 0,
                 width: '100%',
                 height: '380px',
-                background: 'linear-gradient(135deg, #e8dcc8 0%, #d9cdb5 50%, #cbbf9f 100%)',
-                border: '3px solid #8b7355',
+                backgroundImage: `url('${blankCardImage}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 borderRadius: '12px',
                 display: 'flex',
                 alignItems: 'center',

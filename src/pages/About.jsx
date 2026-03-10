@@ -37,7 +37,7 @@ export default function About() {
             What I Value
           </h2>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
             <PlayingCard 
               suit="♠"
               rank="A"

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import blankCardImage from './blank-playing-card-balatr-1753661972.png'
+import blankCardImage from './640px-Ace_of_Spades.png'
 import cardBackImage from './balatro-red-deck.png'
 
 export default function PlayingCard({ suit, rank, title, description }) {

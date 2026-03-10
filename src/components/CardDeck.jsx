@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import blankCardImage from './blank-playing-card-balatr-1753661972.png'
+import blankCardImage from './640px-Ace_of_Spades.png'
 import cardBackImage from './balatro-red-deck.png'
 
 export default function CardDeck({ cards, onCardClick, emptyMessage = "No more cards!" }) {
@@ -232,21 +232,6 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                 justifyContent: 'space-between',
               }}
             >
-              {/* Top Corner - Suit and Rank */}
-              <div style={{ alignSelf: 'flex-start', textAlign: 'center' }}>
-                <div
-                  style={{
-                    fontSize: '2rem',
-                    fontWeight: 'bold',
-                    color: '#8b7355',
-                    lineHeight: '1',
-                    textShadow: '0 1px 2px rgba(0, 0, 0, 0.1)',
-                  }}
-                >
-                  {currentCard.suit}
-                </div>
-              </div>
-
               {/* Card Content */}
               <div style={{ textAlign: 'center', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100%' }}>
                 <h3 style={{ fontSize: '1.6rem', color: '#5a4a38', marginBottom: '0.8rem', fontFamily: 'Georgia, serif', fontWeight: 'bold', textShadow: '0 1px 2px rgba(255, 255, 255, 0.3)' }}>
@@ -297,11 +282,8 @@ export default function CardDeck({ cards, onCardClick, emptyMessage = "No more c
                 )}
               </div>
 
-              {/* Bottom Corner - Suit and Card Counter */}
+              {/* Bottom Corner - Card Counter */}
               <div style={{ alignSelf: 'flex-end', textAlign: 'center', fontSize: '0.85rem', color: '#8b7355', fontWeight: '600' }}>
-                <div style={{ fontSize: '1.5rem', color: '#8b7355', marginBottom: '0.25rem' }}>
-                  {currentCard.suit}
-                </div>
                 <div>Card {currentIndex + 1}/{cards.length}</div>
               </div>
             </div>
